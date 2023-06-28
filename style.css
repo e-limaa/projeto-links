@@ -95,7 +95,7 @@ body * {
 }
 
 #switch button:hover {
-outline: 8px solid var(--highlight-color);
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
@@ -111,6 +111,47 @@ outline: 8px solid var(--highlight-color);
   background: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+
+#text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  padding: 24px;
+}
+
+#back-button {
+  display: flex;
+  justify-content: center;
+}
+
+#back-button a {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  transition: outline 0.1s;
+  padding: 8px 16px 8px 12px;
+  border-radius: 9999px;
+  gap: 4px;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#back-button a:hover {
+  border: 1.5px solid var(--stroke-color-hover);
+  background: var(--surface-color-hover);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#back-button button ion-icon {
+  width: 12px;
+  height: 12px;
+  text-decoration: none;
 }
 
 /* links */
@@ -144,6 +185,7 @@ ul li a:hover {
   border: 1.5px solid var(--stroke-color-hover);
   background: var(--surface-color-hover);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 /* social links */
@@ -184,17 +226,16 @@ footer a:hover {
   color: var(--footer-color-hover);
 }
 
-
 /* media queries */
-  @media (min-width: 700px) {
-    :root {
-      --bg-url: url(./assets/bg-desktop.jpg);
-    }
-
-    .light {
-     --bg-url: url(./assets/bg-desktop-light.jpg);
-    }
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
 
 /* animation */
 @keyframes slide-in {
@@ -208,7 +249,7 @@ footer a:hover {
 
 @keyframes slide-back {
   from {
-    left: 50%
+    left: 50%;
   }
   to {
     left: 0;
